@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: green;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .table {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+        }
+
+        .card {
+            width: 120px;
+            height: 180px;
+            background-color: white;
+            border-radius: 7px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        button {
+            background-color: #FFD700; 
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px #525252;
+        }
+
+        button:hover {
+            background-color: #FFC300;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #FFB700;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Jogo de Cartas</h1>
+    <div class="table">
+        <div class="card" id="heart">
+            <img src="./cards/back_blue.svg" alt="Carta 1">
+        </div>
+        <div class="center">
+            X
+        </div>
+        <div class="card" id="spade">
+            <img src="./cards/back_red.svg" alt="Carta 2">
+        </div>
+    </div>
+    <div class="table">
+        <button>Sortear</button>
+    </div>
+    <div class="table" id="resultado">
+    </div>
+    
+    <script src="resposta.js"></script>
+</body>
+</html>
